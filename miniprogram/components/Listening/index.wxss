@@ -1,0 +1,129 @@
+Component {
+  height: 100%;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.audioPlayer {
+  display: flex;
+  height: 125rpx;
+  width: 96%;
+  margin: 20rpx auto;
+  background-color: #fff;
+  padding: 10rpx;
+  align-items: center;
+  border-radius: 30rpx;
+  box-shadow: 0 0 10px 2px #bdcee0;
+}
+
+.iconButton {
+  margin: 0 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border: 5rpx solid #1d91f6;
+  border-radius: 50%;
+}
+
+.progress {
+  margin-top: 25rpx;
+  margin-right: 20rpx;
+  width: 75%;
+}
+
+.timeContainer {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time {
+  color: #1d91f6;
+  font-size: small;
+}
+
+.stem {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 94%;
+  margin: 0 auto 20rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.section {
+  font-size: x-large;
+  color: #1d91f6;
+  text-align: center;
+  margin: 10rpx 0;
+}
+
+.direction {
+  color: #999999;
+  margin-bottom: 20rpx;
+  text-align: left;
+  text-indent: 2em;
+}
+
+.exercise {
+  margin-bottom: 30rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #1d91f6;
+}
+
+.title,
+.article,
+.introduce {
+  text-align: left;
+  text-indent: 2em;
+}
+
+.question {
+  margin-top: 20rpx;
+}
+
+.order {
+  font-size: large;
+  color: #1d91f6;
+}
+
+.option {
+  margin: 15rpx 0;
+}
+
+.header {
+  margin-bottom: 20rpx;
+  text-align: left;
+  text-indent: 2em;
+}
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 900rpx;
+  border: 1rpx solid #1d91f6;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+.gapFill {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+}
+.articleContainer {
+  width: 70%;
+}
+
+.filedContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.field {
+  border-bottom: 1px solid #1d91f6;
+}

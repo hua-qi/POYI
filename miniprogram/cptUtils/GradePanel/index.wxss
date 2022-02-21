@@ -1,0 +1,26 @@
+.gradePanel {
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 auto 20rpx;
+    padding: 10rpx 20rpx;
+    border-radius: 0 0 20rpx 20rpx;
+    background-color: #fff;
+  }
+  
+  .grade {
+    box-sizing: border-box;
+    width: 60%;
+    margin: 10rpx auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .gradeSection {
+    width: 50%;
+    color: #1d91f6;
+    text-align: center;
+  }
+  
+  .score {
+    width: 40%;
+  }

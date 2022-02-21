@@ -1,0 +1,20 @@
+.sidebar {
+  box-sizing: border-box;
+  width: 6vw;
+  position: fixed;
+  top: 40%;
+  right: 2%;
+  z-index: 100;
+}
+
+.previous,
+.backTopic {
+  box-sizing: border-box;
+  background-color: #1d91f6;
+  color: #fff;
+  text-align: center;
+  margin-top: 10rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  font-size: small;
+}

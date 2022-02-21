@@ -1,0 +1,11 @@
+<scroll-view class="upper" scroll-y>
+  <view class="title">范文</view>
+  <view class="modelEssay">{{ modelEssay }}</view>
+</scroll-view>
+<scroll-view class="under" scroll-y>
+  <view class="title">你的翻译</view>
+  <view class="translation">{{ translationArticle }}</view>
+  <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="jump">{{ propSign && propType === 'TEM8' ? '下一题解析' : '返回试卷列表'
+    }}
+</van-button>
+</scroll-view>

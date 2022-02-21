@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="notice">
+    <van-notice-bar color="#1989fa" background="#ecf9ff" left-icon="info-o" scrollable speed="80" text="点击小旗，消灭单词！" />
+  </view>
+  <view>
+    <view class="wrongsNum">
+      <view class="title"> 错词集 </view>
+      <view class="num">{{ wrongs.length }}</view>
+    </view>
+    <view class="wrongContainer">
+      <view class="wrong" wx:for="{{ wrongs }}" wx:for-item="wrong">
+        <view class="left">
+          <view class="word">{{ wrong.word }}</view>
+          <view class="mean">{{ wrong.mean }}</view>
+        </view>
+        <view class="right">
+          <van-icon name="flag-o" color="#1d91f6" size="50rpx" bindtap="remove" data-wordId="{{ wrong._id }}"
+            data-time="{{ wrong.userOpenIds.time }}" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

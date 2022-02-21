@@ -1,0 +1,15 @@
+.countTime {
+  position: fixed;
+  right: 50rpx;
+  top: 20rpx;
+}
+.item {
+  display: inline-block;
+  width: 22px;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  background-color: red;
+  border-radius: 2px;
+}

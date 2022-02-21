@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "四级单词",
+  "usingComponents": {
+    "van-circle": "@vant/weapp/circle/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}

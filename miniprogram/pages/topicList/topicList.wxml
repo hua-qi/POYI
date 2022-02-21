@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="topicList" bindtap="showPopup" wx:for="{{ partsList }}" wx:for-item="partName"
+    data-part="{{ partName }}">
+    <text class="title">{{ partName }}</text>
+    <van-icon name="arrow" color="#1d91f6" size="50rpx" />
+  </view>
+</view>
+<van-popup custom-class="leftPopup" show="{{ show }}" closeable round position="right" bind:close="onClose"
+  close-icon-position="top-right" close-icon="close" safe-area-inset-top="true">
+  <view class="broadside">
+    <view wx:for="{{ idList }}" wx:key="{{ item }}" data-id="{{ item }}" bindtap="getExercise">{{
+      item }}</view>
+  </view>
+</van-popup>

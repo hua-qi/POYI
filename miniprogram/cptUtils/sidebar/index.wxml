@@ -1,0 +1,4 @@
+<view class="sidebar">
+    <view class="previous" bindtap="previous">上一题</view>
+    <view class="backTopic" bindtap="backTopic">返回列表</view>
+</view>

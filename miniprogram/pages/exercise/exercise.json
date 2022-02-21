@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "listening": "../../components/Listening",
+    "reading": "../../components/Reading",
+    "writing": "../../components/Writing",
+    "translation": "../../components/Translation",
+    "cloze": "../../components/Cloze",
+    "language-usage": "../../components/languageUsage",
+    "sidebar": "../../cptUtils/sidebar"
+  }
+}

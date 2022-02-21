@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "错过的单词",
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
+  }
+}

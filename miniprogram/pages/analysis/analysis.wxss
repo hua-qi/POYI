@@ -1,0 +1,10 @@
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+.compontent {
+  height: 100%;
+  width: 96%;
+  margin: 0 auto;
+}

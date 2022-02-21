@@ -1,0 +1,41 @@
+compontent {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+.container {
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 96%;
+  margin: 20rpx auto 0;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+.title {
+  font-size: x-large;
+  color: #1d91f6;
+  width: 300rpx;
+  margin: 0 auto 10rpx;
+  text-align: center;
+}
+.direction,
+.stem {
+  text-indent: 2rem;
+  margin-bottom: 20rpx;
+}
+.direction {
+  color: #c8c4c5;
+}
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 900rpx;
+  border: 1rpx solid #1d91f6;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.submit {
+  margin: 20rpx auto;
+}
+

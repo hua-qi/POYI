@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "analysis-listening": "../../components/AnalysisListening",
+    "analysis-reading": "../../components/AnalysisReading",
+    "analysis-writing": "../../components/AnalysisWriting",
+    "analysis-language-usage": "../../components/AnalysisLanguageUsage",
+    "analysis-cloze": "../../components/AnalysisCloze",
+    "analysis-translation": "../../components/AnalysisTranslation",
+    "sidebar": "../../cptUtils/sidebar"
+  }
+}

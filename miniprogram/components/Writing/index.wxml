@@ -1,0 +1,23 @@
+<count-down wx:if="{{ propSign }}" class="countDown" prop-time="{{ time }}" bind:countDown="onCountDown"></count-down>
+<view class="container" wx:if="{{ propPart === 'CET_writing'}}">
+  <view class="title">writing</view>
+  <view class="direction">{{ exercise.directions }}</view>
+  <view class="stem">{{ exercise.stem }}</view>
+  <image class="image" wx:if="{{ exercise.imgUrl }}" src="{{ exercise.imgUrl }}" bindtap="preview" data-src="{{ exercise.imgUrl }}"></image>
+  <textarea class="textarea" placeholder="此处书写内容" maxlength="-1" bindblur="getComposition"></textarea>
+  <van-button custom-class="submit" block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="submit">{{
+    propSign ? '下一题' :
+    '提交'
+    }}</van-button>
+</view>
+<view class="container" wx:if="{{ propPart === 'TEM_writing'}}">
+  <view class="title">writing</view>
+  <view class="direction" wx:for="{{ exercise.directions }}" wx:for-item="direction">{{ direction }}</view>
+  <view class="excerpt" wx:for="{{ exercise.excerpt }}" wx:for-item="excerpt">{{ excerpt }}</view>
+  <view class="stem">{{ exercise.stem }}</view>
+  <textarea class="textarea" placeholder="此处书写内容" maxlength="-1" bindblur="getComposition"></textarea>
+  <van-button custom-class="submit" block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="submit">{{
+    propSign && typeCut === 'CET' ? '下一题' :
+    '提交'
+    }}</van-button>
+</view>

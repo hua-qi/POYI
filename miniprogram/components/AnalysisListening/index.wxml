@@ -1,0 +1,30 @@
+<view class="global" wx:if="{{ propPart === 'CET_listening' }}">
+  <grade-panel prop-ras="{{ RAS }}" />
+  <analysis-container prop-title="secitonA" prop-section="{{ sectionAAnalysis }}" />
+  <analysis-container prop-title="secitonB" prop-section="{{ sectionBAnalysis }}" />
+  <analysis-container prop-title="secitonC" prop-section="{{ sectionCAnalysis }}" />
+  <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="jump">{{ propSign ? '下一题解析' :
+    '返回试卷列表'
+    }}
+  </van-button>
+</view>
+<view class="global" wx:elif="{{ propPart == 'TEM_listening' }}">
+  <view class="container">
+    <view class="section">Dictation</view>
+    <view class="model">
+      <view class="title">范文</view>
+      <view class="article" wx:for="{{ dictationAnalysis.modelEssay }}" wx:for-item="essay">{{ essay }}</view>
+    </view>
+    <view class="dictation">
+      <view class="title">你的答题</view>
+      <view class="article" wx:for="{{ dictationAnalysis.dictation }}" wx:for-item="dictation">{{ dictation }}</view>
+    </view>
+  </view>
+  <analysis-container prop-title="Task" prop-section="{{ taskGapFillAnalysis }}" prop-right="answer"
+    prop-write="userAnswer" />
+  <analysis-container prop-title="Conversation" prop-section="{{ conversationAnalysis }}" />
+  <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="jump">{{ propSign ? '下一题解析' :
+    '返回试卷列表'
+    }}
+  </van-button>
+</view>

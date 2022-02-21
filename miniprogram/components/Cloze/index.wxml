@@ -1,0 +1,32 @@
+<view class="all">
+    <scroll-view class="upper" scroll-y>
+        <text class="function">题干区</text>
+        <count-down wx:if="{{ propSign }}" class="countDown" prop-time="{{ time }}" bind:countDown="onCountDown">
+        </count-down>
+        <view class="container">
+            <view class="section">Cloze</view>
+            <view class="direction">{{ exercise.directions }}</view>
+            <view class="article" wx:for="{{ exercise.article }}" wx:key="{{ item }}">{{ item }}</view>
+        </view>
+    </scroll-view>
+    <scroll-view class="under" scroll-y>
+        <text class="function">答题区</text>
+        <view class="container">
+            <view class="section">sectionA</view>
+            <view class="selection" wx:for="{{ exercise.analysisList }}" wx:for-item="analysis"
+                wx:key="{{ analysis.order }}" wx:for-index="analysisIndex" >
+                <view class="order">{{ analysis.order }}.</view>
+                <picker class="picker" bindchange="clozePickerChange" data-analysisIndex="{{ analysisIndex }}"
+                    value="{{ exercise.options }}" range="{{ exercise.options }}">
+                    <view >
+                        当前选择：{{ clozeReplies[analysisIndex] }}
+                    </view>
+                </picker>
+            </view>
+        </view>
+        <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="submit">{{
+            propSign ? '下一题' :
+            '提交'
+            }}</van-button>
+    </scroll-view>
+</view>

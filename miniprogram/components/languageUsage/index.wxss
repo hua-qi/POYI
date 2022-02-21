@@ -1,0 +1,48 @@
+.container {
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 auto 20rpx;
+    padding: 20rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+  }
+  
+  .section {
+    font-size: x-large;
+    color: #1d91f6;
+    text-align: center;
+    margin: 10rpx 0;
+  }
+  
+  .direction {
+    color: #999999;
+    margin-bottom: 20rpx;
+    text-align: left;
+    text-indent: 2em;
+  }
+  
+  .exercise {
+    margin-bottom: 30rpx;
+    padding-top: 20rpx;
+    border-top: 1rpx solid #1d91f6;
+  }
+  
+  .title,
+  .article,
+  .introduce {
+    text-align: left;
+    text-indent: 2em;
+  }
+  
+  .question {
+    margin-top: 20rpx;
+  }
+  
+  .order {
+    font-size: large;
+    color: #1d91f6;
+  }
+  
+  .option {
+    margin: 15rpx 0;
+  }

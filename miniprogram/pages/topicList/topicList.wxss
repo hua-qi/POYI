@@ -1,0 +1,47 @@
+page {
+  background-color: #f0f0f0;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 90%;
+  height: 90%;
+  border-radius: 30rpx;
+  box-shadow: 0 0 10px 2px #bdcee0;
+  background-image: url(https://636c-cloud1-4gvnm4k7b5bb273b-1307703970.tcb.qcloud.la/%E7%A0%B4%E8%AF%91%E8%8B%B1%E8%AF%AD%E5%9B%BE%E7%89%87/breakEnglishBlueTwo.jpg?sign=c55c190803f422a1bb0f2562ce86d44d&t=1636454255);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.topicList {
+  box-sizing: border-box;
+  width: 90%;
+  height: 120rpx;
+  background-color: #fff;
+  margin-top: 30rpx;
+  padding: 0 30rpx;
+  border-radius: 30rpx;
+  box-shadow: 0 0 10px 2px #bdcee0;
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  color: #1d91f6;
+  line-height: 120rpx;
+}
+.leftPopup {
+  height: 90%;
+}
+.broadside {
+  margin: 100rpx 20rpx;
+}
+.broadside view {
+  padding: 10rpx;
+  background-color: #1d91f6;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}

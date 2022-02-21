@@ -1,0 +1,11 @@
+<count-down wx:if="{{ propSign }}" class="countDown" prop-time="{{ time }}" bind:countDown="onCountDown"></count-down>
+<view class="container">
+  <view class="title">translation</view>
+  <view class="direction">{{ exercise.directions }}</view>
+  <view class="stem">{{ exercise.stem }}</view>
+  <textarea class="textarea" placeholder="此处书写内容" maxlength="-1" bindblur="getTranslation"></textarea>
+  <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="submit">{{
+    propSign && typeCut === 'TEM' ? '下一题' :
+    '提交'
+    }}</van-button>
+</view>

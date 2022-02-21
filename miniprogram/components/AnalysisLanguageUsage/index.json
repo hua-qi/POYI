@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "analysis-container": "../../cptUtils/AnalysisContainer",
+        "van-button": "@vant/weapp/button/index"
+    }
+}

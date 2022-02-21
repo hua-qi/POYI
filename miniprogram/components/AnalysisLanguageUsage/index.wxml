@@ -1,0 +1,5 @@
+<analysis-container prop-title="{{ usageAnalysis.title }}" prop-section="{{ usageAnalysis }}" />
+<van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="jump">{{ propSign ? '下一题解析' : '返回试卷列表'
+    }}
+</van-button>
+

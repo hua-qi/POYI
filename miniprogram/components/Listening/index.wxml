@@ -1,0 +1,52 @@
+<count-down wx:if="{{ propSign }}" class="countDown" prop-time="{{ time }}" bind:countDown="onCountDown"></count-down>
+<view class="audioPlayer">
+  <van-icon class="iconButton" name="play-circle-o" size="60rpx" bindtap="listenerButtonPlay" wx:if="{{ !isPlay }}" />
+  <van-icon class="iconButton" name="pause-circle-o" size="60rpx" bindtap="listenerButtonPause" wx:if="{{ isPlay }}" />
+  <view class="progress">
+    <van-progress percentage="{{ percentage }}" pivot-color="#1d91f6"
+      color="linear-gradient(to right, #ffffff, #1d91f6, #ffffff)" bindtouchforcechange="progressChange" />
+    <view class="timeContainer">
+      <text class="time">{{ currentTime || '00:00' }}</text>
+      <text class="time">{{ duration || '00:00' }}</text>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y class="stem" wx:if="{{ propPart === 'CET_listening' }}">
+  <exercise-container prop-section="secitonA" prop-directions="{{ CETSectionA.directions }}"
+    prop-exercises="{{ CETSectionA.exercises }}" bind:overHandOption="sectionARadioChange" />
+  <exercise-container prop-section="secitonB" prop-directions="{{ CETSectionB.directions }}"
+    prop-exercises="{{ CETSectionB.exercises }}" bind:overHandOption="sectionBRadioChange" />
+  <exercise-container prop-section="secitonC" prop-directions="{{ CETSectionC.directions }}"
+    prop-exercises="{{ CETSectionC.exercises }}" bind:overHandOption="sectionCRadioChange" />
+  <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="submit">{{
+    propSign ? '下一题' :
+    '提交'
+    }}</van-button>
+</scroll-view>
+<scroll-view scroll-y class="stem" wx:elif="{{ propPart === 'TEM_listening' }}">
+  <view class="container">
+    <view class="section">dictation</view>
+    <view class="direction" wx:for="{{ TEMDictation.directions }}" wx:for-item="direction">{{ direction }}</view>
+    <view class="header" wx:for="{{ TEMDictation.header }}" wx:for-item="header">{{ header }}</view>
+    <textarea class="textarea" placeholder="此处书写内容" maxlength="-1" bindblur="getComposition"></textarea>
+  </view>
+  <view class="container">
+    <view class="section">{{ TEMSectionA.title }}</view>
+    <view class="direction" wx:for="{{ TEMSectionA.directions }}" wx:for-item="direction">{{ direction }}</view>
+    <view class="gapFill">
+      <view class="articleContainer">
+        <view class="article" wx:for="{{ TEMSectionA.article }}" wx:for-item="article">{{ article }}</view>
+      </view>
+      <view class="filedContainer">
+        <van-field input-class="field" value="{{ value }}" placeholder="{{item.order}}.填入答案"
+          bind:blur="sectionAFieldBlur" wx:for="{{ TEMSectionA.analysisList }}" data-order="{{ item.order }}" />
+      </view>
+    </view>
+  </view>
+  <exercise-container prop-section="{{ TEMSectionB.title }}" prop-directions="{{ TEMSectionB.directions }}"
+    prop-exercises="{{ TEMSectionB.exercises }}" bind:overHandOption="TEMsectionBRadioChange" />
+  <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="submit">{{
+    propSign ? '下一题' :
+    '提交'
+    }}</van-button>
+</scroll-view>

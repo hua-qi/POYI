@@ -1,0 +1,72 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "首页",
+                    "pathName": "pages/home/home",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "题库",
+                    "pathName": "pages/question/question",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "题库列表",
+                    "pathName": "pages/topicList/topicList",
+                    "query": "part=CET4_writing&type=CET4",
+                    "scene": null
+                },
+                {
+                    "name": "exercise",
+                    "pathName": "pages/exercise/exercise",
+                    "query": "part=CET_writing&type=CET6",
+                    "scene": null
+                },
+                {
+                    "name": "答案解析",
+                    "pathName": "pages/analysis/analysis",
+                    "query": "part=CET_reading&type=CET4",
+                    "scene": null
+                },
+                {
+                    "name": "单词",
+                    "pathName": "pages/word/word",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "个人",
+                    "pathName": "pages/person/person",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "错词集",
+                    "pathName": "pages/wrongs/wrongs",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "message",
+                    "pathName": "pages/message/message",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

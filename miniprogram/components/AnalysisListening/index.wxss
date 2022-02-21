@@ -1,0 +1,63 @@
+.global {
+  width: 100%;
+}
+
+
+
+.container {
+  box-sizing: border-box;
+  width: 94%;
+  margin: 0 auto 20rpx;
+  padding: 10rpx 20rpx 0;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.section {
+  font-size: x-large;
+  color: #1d91f6;
+  text-align: center;
+  margin: 20rpx 0 10rpx 0;
+}
+
+.rightGroup {
+  margin-bottom: 20rpx;
+  border: 2rpx solid #1d91f6;
+}
+
+.wrongGroup {
+  margin-bottom: 20rpx;
+  border: 2rpx solid red;
+}
+
+.rightTitle {
+  color: #1d91f6;
+}
+
+.wrongTitle {
+  color: red;
+}
+
+.right {
+  border-bottom: 2rpx solid #1d91f6;
+}
+
+.wrong {
+  border-bottom: 2rpx solid red;
+}
+
+.model,
+.dictation {
+  box-sizing: border-box;
+  padding: 16rpx;
+}
+
+.title {
+  margin: 10rpx 0;
+  font-size: large;
+  color: #1d91f6;
+}
+
+.article {
+  text-indent: 2rem;
+}

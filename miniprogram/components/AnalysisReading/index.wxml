@@ -1,0 +1,21 @@
+<view class="global" wx:if="{{ propPart === 'CET_reading' }}">
+  <grade-panel prop-ras="{{ RAS }}" />
+  <analysis-container prop-title="secitonA" prop-section="{{ CETSectionAAnalysis }}" prop-analysis="grammar"
+    prop-resolution="semantics" />
+  <analysis-container prop-title="secitonB" prop-section="{{ CETSectionBAnalysis }}" prop-analysis="location"
+    prop-resolution="analysis" />
+  <analysis-container prop-title="secitonC" prop-section="{{ CETSectionCAnalysis }}" prop-analysis="location"
+    prop-resolution="analysis" />
+  <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="jump">{{ propSign ? '下一题解析' :
+    '返回试卷列表'
+    }}
+  </van-button>
+</view>
+<view class="global" wx:elif="{{ propPart === 'TEM_reading' }}">
+  <analysis-container prop-title="secitonA" prop-section="{{ TEMSectionAAnalysis }}" />
+  <analysis-container prop-title="secitonB" prop-section="{{ TEMSectionBAnalysis }}" />
+  <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="jump">{{ propSign ? '下一题解析' :
+    '返回试卷列表'
+    }}
+  </van-button>
+</view>

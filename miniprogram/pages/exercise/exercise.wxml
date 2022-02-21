@@ -1,0 +1,12 @@
+<sidebar prop-type="{{ type }}" />
+<writing class="compontent" wx:if="{{ part === 'CET_writing' || part === 'TEM_writing'}}" prop-sign="{{ sign }}"
+    prop-part="{{ part }}" />
+<listening class="compontent" wx:elif="{{ part === 'CET_listening' || part === 'TEM_listening' }}"
+    prop-sign="{{ sign }}" prop-part="{{ part }}" />
+<cloze class="compontent" wx:elif="{{ part === 'TEM_cloze' }}" prop-sign="{{ sign}}" prop-part="{{ part}}" />
+<reading class="compontent" wx:elif="{{ part === 'CET_reading' || part === 'TEM_reading' }}" prop-sign="{{ sign }}"
+    prop-part="{{ part }}" />
+<translation class="compontent" wx:elif="{{ part === 'CET_translation' || part === 'TEM_translation'}}"
+    prop-sign="{{ sign }}" prop-part="{{ part }}" />
+<language-usage class="compontent" wx:elif="{{  part === 'TEM_languageUsage' }}" prop-sign="{{ sign }}"
+    prop-part="{{ part }}" />

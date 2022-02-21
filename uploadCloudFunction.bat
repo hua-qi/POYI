@@ -1,0 +1,1 @@
+"D:\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-4gvnm4k7b5bb273b --n quickstartFunctions --r --project "D:\01-huaqi\微信小程序\BreakEnglish" --report_first --report

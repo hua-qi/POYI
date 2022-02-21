@@ -1,0 +1,28 @@
+<view class="container" data-type="CET4" bindtap="getQuestion">
+    <view class="bankImage">
+        <van-image image-class="cover" width="5rem" height="5rem" fit="cover"
+            src="cloud://cloud1-4gvnm4k7b5bb273b.636c-cloud1-4gvnm4k7b5bb273b-1307703970/破译英语图片/CET4.png" />
+    </view>
+    <view class="title">英语四级历年题库</view>
+</view>
+<view class="container" data-type="CET6" bindtap="getQuestion">
+    <view class="bankImage">
+        <van-image image-class="cover" width="5rem" height="5rem" fit="cover"
+            src="cloud://cloud1-4gvnm4k7b5bb273b.636c-cloud1-4gvnm4k7b5bb273b-1307703970/破译英语图片/CET6.png" />
+    </view>
+    <view class="title">英语六级历年题库</view>
+</view>
+<view class="container" data-type="TEM4" bindtap="getQuestion">
+    <view class="bankImage">
+        <van-image image-class="cover" width="5rem" height="5rem" fit="cover"
+            src="cloud://cloud1-4gvnm4k7b5bb273b.636c-cloud1-4gvnm4k7b5bb273b-1307703970/破译英语图片/TEM4.png" />
+    </view>
+    <view class="title">英语专业四级历年题库</view>
+</view>
+<view class="container" data-type="TEM8" bindtap="getQuestion">
+    <view class="bankImage">
+        <van-image image-class="cover" width="5rem" height="5rem" fit="cover"
+            src="cloud://cloud1-4gvnm4k7b5bb273b.636c-cloud1-4gvnm4k7b5bb273b-1307703970/破译英语图片/TEM8.png" />
+    </view>
+    <view class="title">英语专业八级历年题库</view>
+</view>

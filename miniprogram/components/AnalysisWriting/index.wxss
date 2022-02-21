@@ -1,0 +1,26 @@
+compontent {
+  width: 100%;
+  height: 100%;
+}
+.upper,
+.under {
+  box-sizing: border-box;
+  width: 96%;
+  height: 48%;
+  margin: 20rpx auto 0;
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+.title {
+  margin: 20rpx;
+  font-size: large;
+  color: #1d91f6;
+}
+.modelEssay,
+.composition {
+  text-indent: 2rem;
+  margin-bottom: 20rpx;
+}
+
+

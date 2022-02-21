@@ -1,0 +1,92 @@
+page {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://636c-cloud1-4gvnm4k7b5bb273b-1307703970.tcb.qcloud.la/%E7%A0%B4%E8%AF%91%E8%8B%B1%E8%AF%AD%E5%9B%BE%E7%89%87/breakEnglishMessage.jpg?sign=d954183873ccad413dd1df05dd825565&t=1636790012);
+  background-size: 100% 100%; 
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 2%;
+  width: 98%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.board {
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  padding: 2% 4%;
+  width: 98%;
+  height: 90%;
+  background-color: rgba(10%,10%,10%,0.1);
+}
+.left, .right {
+  width: 100%;
+  display: flex;
+}
+.right, 
+.right .nameMessage {
+  flex-direction: row-reverse;
+}
+.messageContainer {
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.right .messageContainer {
+  align-items: flex-end;
+}
+.time {
+  font-size: small;
+  color: #bdbdbd;
+  margin-bottom: 6rpx;
+}
+.nameMessage {
+  display: flex;
+}
+.nickName {
+  padding: 20rpx;
+  background-color: #1d91f6ff;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 20rpx;
+}
+.message {
+  margin: 0 20rpx;
+  padding: 20rpx;
+  background-color: #ffffff;
+  font-weight: 500;
+  border-radius: 20rpx;
+}
+.inputBox {
+  box-sizing: border-box;
+  width: 98%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  height: 90%;
+  width: 76%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding-left: 10rpx;
+}
+.button {
+  height: 90%;
+  width: 20%;
+  border-radius: 20rpx;
+  background-color: #fff;
+  color: #1d91f6;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

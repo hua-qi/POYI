@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="section">{{ propTitle }}</view>
+    <van-cell-group inset wx:for="{{ propSection }}" wx:key="{{ item[propOrder] }}" class="container"
+      custom-class="{{ item[propReply] === item[propAnswer] ? 'rightGroup' : 'wrongGroup' }}">
+      <van-cell title-class="{{ item[propReply] === item[propAnswer] ? 'rightTitle' : 'wrongTitle' }}"
+        custom-class="{{ item[propReply] === item[propAnswer] ? 'right' : 'wrong' }}" title="{{ item[propOrder] }}."
+        value="你的答案: {{ item[propReply] }}" />
+      <van-cell label-class="label" title="解析" value="正确答案: {{ item[propAnswer] }}" label="{{ item[propAnalysis] }}{{ item[propResolution] }}" />
+    </van-cell-group>
+  </view>

@@ -1,0 +1,6 @@
+<view class="gradePanel">
+    <view class="grade" wx:for="{{ sectionsGrade }}">
+      <view class="gradeSection">{{ item.section }}</view>
+      <view class="score">{{ item.score }} 分</view>
+    </view>
+  </view>

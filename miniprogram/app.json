@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/person/person",
+    "pages/word/word",
+    "pages/question/question",
+    "pages/topicList/topicList",
+    "pages/exercise/exercise",
+    "pages/analysis/analysis",
+    "pages/wrongs/wrongs",
+    "pages/message/message"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1d91f6",
+    "navigationBarTitleText": "破译英语",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#1d91f6",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/word-active.png",
+        "iconPath": "images/word.png",
+        "pagePath": "pages/word/word",
+        "text": "单词"
+      },
+      {
+        "selectedIconPath": "images/question-active.png",
+        "iconPath": "images/question.png",
+        "pagePath": "pages/question/question",
+        "text": "题库"
+      },
+      {
+        "selectedIconPath": "images/person-active.png",
+        "iconPath": "images/person.png",
+        "pagePath": "pages/person/person",
+        "text": "个人"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

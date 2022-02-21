@@ -1,0 +1,93 @@
+Component {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0f0;
+  }
+  .all {
+    height: 100%;
+    width: 100%;
+  }
+  .function {
+    display: block;
+    font-size: larger;
+    color: #1d91f6;
+    margin: 10rpx 0 20rpx 20rpx;
+  }
+  
+  .upper {
+    height: 54%;
+  }
+  
+  .under {
+    height: 46%;
+  }
+  
+  .upper,
+  .under {
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    width: 98%;
+    margin: 10rpx auto;
+    border-radius: 20rpx;
+  }
+  
+  .container {
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 auto 20rpx;
+    padding: 20rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+  }
+  
+  .section {
+    box-sizing: border-box;
+    font-size: x-large;
+    color: #1d91f6;
+    text-align: center;
+    margin: 10rpx 0;
+  }
+  
+  .direction {
+    box-sizing: border-box;
+    color: #999999;
+    margin-bottom: 20rpx;
+    text-align: left;
+    text-indent: 2em;
+  }
+  
+  .exerciseOrder {
+    box-sizing: border-box;
+    margin: 10rpx 0;
+    font-size: medium;
+    color: #1d91f6;
+  }
+  
+  .article {
+    text-align: left;
+    text-indent: 2em;
+  }
+  
+  .selection {
+    box-sizing: border-box;
+    margin-left: 30rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+  }
+  .order {
+    box-sizing: border-box;
+    margin-right: 20rpx;
+  }
+  .picker {
+    flex: 1;
+    font-size: large;
+  }
+  .field {
+    border-bottom: 1px solid #1d91f6;
+  }
+  .option {
+    box-sizing: border-box;
+    margin: 15rpx 0;
+  }
+  
+  

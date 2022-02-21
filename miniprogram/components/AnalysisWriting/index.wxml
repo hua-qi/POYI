@@ -1,0 +1,11 @@
+<scroll-view class="upper" scroll-y>
+  <view class="title">范文</view>
+  <view wx:for="{{ modelEssay }}" wx:for-item="paragraph" class="modelEssay">{{paragraph}}</view>
+</scroll-view>
+<scroll-view class="under" scroll-y>
+  <view class="title">你的作文</view>
+  <view class="composition" wx:for="{{ componsitionArray }}">{{ item }}</view>
+  <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="jump">{{ propSign && typeCut === 'CET' ? '下一题解析' : '返回试卷列表'
+    }}
+</van-button>
+</scroll-view>

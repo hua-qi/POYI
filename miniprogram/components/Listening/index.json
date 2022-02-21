@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-progress": "@vant/weapp/progress/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "count-down": "../../cptUtils/CountDown/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index",
+    "exercise-container": "../../cptUtils/ExerciseContainer/index"
+  }
+}

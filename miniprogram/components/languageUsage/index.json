@@ -1,0 +1,9 @@
+{
+    "component": true,
+    "usingComponents": {
+        "van-radio": "@vant/weapp/radio/index",
+        "van-radio-group": "@vant/weapp/radio-group/index",
+        "van-button": "@vant/weapp/button/index",
+        "count-down": "../../cptUtils/CountDown/index"
+    }
+}
