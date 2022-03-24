@@ -1,6 +1,8 @@
 const db = wx.cloud.database();
 let overallMessagesList = [];
 let overallLength = 1;
+const openId = wx.getStorageSync('openId');
+
 Page({
   data: {
     message: "",
@@ -10,21 +12,11 @@ Page({
   },
 
   onLoad() {
-    overallMessagesList = [];
-  
-    // 获取 用户的 openId
-    const openId = wx.getStorageSync('openId');
-    this.setData({
-      openId,
-      messagesList: []
-    });
     this.getMessagesCollection();
-
   },
-  onHide() {
-    
-  },
+ 
 
+  // 获取留言
   getMessagesCollection(i = 0) {
     // 获取数据
     db.collection("messages")
@@ -35,32 +27,13 @@ Page({
       .then(res => {
         overallMessagesList.push(...res.data);
         // 升序排序
-        overallMessagesList.sort(this.sortBy('timeStamp', 1))
+        // overallMessagesList.sort(this.sortBy('timeStamp', 1))
+        overallMessagesList.sort((firstEl, secondEl) => firstEl.timeStamp - secondEl.timeStamp);
         this.setData({
           messagesList: overallMessagesList
         })
       })
   },
-
-  sortBy(attr, rev) {
-    if (rev == undefined) {
-      rev = 1
-    } else {
-      (rev) ? 1: -1;
-    }
-    return function (a, b) {
-      a = a[attr];
-      b = b[attr];
-      if (a < b) {
-        return rev * -1
-      }
-      if (a > b) {
-        return rev * 1
-      }
-      return 0;
-    }
-  },
-
 
   // 获取留言信息
   getMessage(e) {
@@ -74,8 +47,7 @@ Page({
   // 下拉获取更多信息
   dropDown() {
     // 获取messages
-    this.getMessagesCollection(overallLength);
-    overallLength++;
+    this.getMessagesCollection(overallLength++);
     this.dropDownStop();
   },
 
@@ -86,9 +58,10 @@ Page({
     })
   },
 
+  // 发送留言
   submit() {
-    // 获取留言
-    let message = "";
+
+    // 边界判断
     if (!this.data.message) {
       wx.showToast({
         title: '留言得有字呀~',
@@ -97,8 +70,13 @@ Page({
       })
       return
     } else {
-      message = this.data.message;
+      this.addMessage(this.data.message);
     }
+    
+  },
+
+  // 同步数据库
+  addMessage(message) {
     // 获取用户名
     const {
       nickName
@@ -115,6 +93,9 @@ Page({
       })
       .then(res => {
         console.log(res);
+        // 这里是重点
+        // 为了达到每次发送留言后，页面总显示最新的 6 条数据效果
+        // 特此添加了一个全局数组，每次重新请求最新信息时，进行清空
         overallMessagesList = [];
         this.setData({
           message: ""

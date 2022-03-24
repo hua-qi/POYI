@@ -24,52 +24,17 @@ Page({
         this.next();
     },
 
-    // 答案验证
-    verify(option) {
-        let selected = true;
-        const rightId = this.data.word._id;
-        const selectId = option.target.dataset.id;
-        this.setData({
-            selectId,
-            rightId,
-            selected
-        })
-    },
-
-    // 倒计时实现
-    countDown() {
-        let value = 0;
-        this.setData({
-            timer: setInterval(() => {
-                value += 1;
-                console.log(1);
-                // 倒计时停止
-                this.setData({
-                    value
-                })
-                if (value === 100 || this.data.selected) {
-                    this.setData({
-                        value: 100,
-                        selected: true,
-                    });
-                    // 清除限时
-                    clearInterval(this.data.timer);
-                    // 错题标记
-                    this.wrongMark();
-                }
-            }, 100)
-        })
-    },
-
     // 下一题
     async next() {
         let words = "";
-        // 获取单词数据
+        // 获取单词数据 （须进行同步设置，便于之后获取 word）
         await db.collection("CET4_words").aggregate().sample({
             size: 4
         }).end().then(res => {
             words = res.list
         });
+        
+        // 随机选择正确选项
         let word = words[Math.floor(Math.random() * words.length)];
         this.setData({
             words,
@@ -84,11 +49,52 @@ Page({
         this.countDown();
     },
 
+    // 倒计时实现
+    countDown() {
+        let value = 0;
+        this.setData({
+            timer: setInterval(() => {
+                value += 1;
+                console.log(1);
+                // 倒计时停止
+                this.setData({
+                    value
+                })
+
+                // 倒计时时间到 或者 用户已选择
+                if (value === 100 || this.data.selected) {
+                    this.setData({
+                        value: 100,
+                        selected: true,
+                    });
+                    // 清除限时
+                    clearInterval(this.data.timer);
+                    // 错题标记
+                    this.wrongMark();
+                }
+            }, 100)
+        })
+    },
+
+
+    // 答案验证
+    verify(option) {
+        let selected = true;
+        const rightId = this.data.word._id;
+        const selectId = option.target.dataset.id;
+        this.setData({
+            selectId,
+            rightId,
+            selected
+        })
+    },
+
     // 错题标记
     wrongMark() {
         let selectId = this.data.selectId;
         let rightId = this.data.rightId;
         const openId = wx.getStorageSync('openId');
+        
         if (selectId !== rightId) {
             wx.cloud.callFunction({
                 name: "pushOpenId",

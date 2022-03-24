@@ -1,43 +1,34 @@
 const db = wx.cloud.database();
+const openId = wx.getStorageSync("openId");
 Page({
   data: {
+    // 错词集
     wrongs: "",
+    // 错词数
     total: ""
   },
 
   onLoad() {
-    const openId = wx.getStorageSync('openId');
-    this.getWrongs(openId);
-    this.getTotal(openId);
+    if (openId) this.getWrongs(openId);
   },
 
-  async getWrongs(openId) {
-    await db.collection("CET4_words").where({
+  // 获取错词集
+  getWrongs(openId) {
+    db.collection("CET4_words").where({
       userOpenIds: openId
     }).get().then(res => {
-      console.log(res);
+    let total = res.data.length;
       this.setData({
-        wrongs: res.data
+        wrongs: res.data,
+        total
       })
     });
 
   },
-  async getTotal(openId) {
-    await db.collection("CET4_words").where(({
-      userOpenIds: openId
-    })).count().then(res => {
-      this.setData({
-        total: res.total
-      })
-    });
-  },
+
 
   remove(e) {
-    console.log(e);
     const wordId = e.target.dataset.wordid;
-    console.log(wordId);
-    const openId = wx.getStorageSync("openId");
-    console.log(openId);
     wx.cloud.callFunction({
       name: "popOpenId",
       data: {
@@ -50,9 +41,7 @@ Page({
         }
       }
     }).then(res => {
-      console.log(res);
       this.getWrongs(openId);
-      this.getTotal(openId);
     })
 
   }
