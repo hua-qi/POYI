@@ -7,15 +7,13 @@ Page({
         part: "",
         type: ""
     },
+
     onLoad(option) {
-        console.log(option);
         db.collection('topicList').where({
             type: option.type
         }).get().then(res => {
-            console.log(res.data);
             const partsList = res.data[0].partsList;
             const idList = res.data[0].idList;
-            // wx.setStorageSync('topicList', res.data);
             this.setData({
                 partsList,
                 idList,
@@ -48,6 +46,8 @@ Page({
         const part = this.data.part.replace(reg, "");
         const sign = this.data.part.substring(5,8);
         const id = e.currentTarget.dataset.id;
+        
+        // 请求整套习题
         if (sign === "ALL") {
             let partName = "";
             let partArray = "";
@@ -61,21 +61,21 @@ Page({
                 partName = "listening";
                 partArray = ["TEM_listening", "TEM_reading", "TEM_languageUsage", "TEM_translation", "TEM_writing"];
             }
-            for (let i = 0; i < partArray.length; i++) {
+
+            for (let item of partArray) {
                 await this.getExercisePart({
-                    part: partArray[i],
+                    part: item,
                     id,
                     type
-                });
+                })
             }
+           
             wx.hideLoading();
             wx.redirectTo({
                 url: `/pages/exercise/exercise?sign=all&part=${typeCut}_${partName}&type=${type}`,
             })
         } else {
-            console.log(part);
-            console.log(id);
-            console.log(type);
+           
             await this.getExercisePart({
                 part,
                 id,
@@ -96,7 +96,7 @@ Page({
             id,
             type
         } = event;
-        console.log(event)
+        
         await db.collection(part).where({
             type,
             id

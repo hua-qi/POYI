@@ -1,4 +1,6 @@
+<!-- 时间戳格式转换 -->
 <wxs src="./timeTranslate.wxs" module="timeTranslate"></wxs>
+
 <view class="container">
   <scroll-view class="board" scroll-y refresher-enabled refresher-triggered="{{ triggered }}"
     bindrefresherrefresh="dropDown" bindrefresherrestore="stop">

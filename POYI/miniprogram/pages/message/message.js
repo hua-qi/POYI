@@ -30,7 +30,8 @@ Page({
         // overallMessagesList.sort(this.sortBy('timeStamp', 1))
         overallMessagesList.sort((firstEl, secondEl) => firstEl.timeStamp - secondEl.timeStamp);
         this.setData({
-          messagesList: overallMessagesList
+          messagesList: overallMessagesList,
+          openId
         })
       })
   },
