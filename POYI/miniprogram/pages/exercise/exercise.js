@@ -6,6 +6,7 @@ Page({
   },
 
   onLoad(option) {
+    console.log(option)
     this.setData({
       sign: option.sign,
       part: option.part,

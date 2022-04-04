@@ -79,7 +79,7 @@ Component({
             section: "CETSectionC"
           },
         ]
-      } else if (type === "TEM4") {
+      } else if (type === "TEM4" || type === "TEM8") {
         requestList = [{
             collectionName: "TEM_readingSectionA",
             id: children.sectionAId,

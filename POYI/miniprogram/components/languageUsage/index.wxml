@@ -1,8 +1,32 @@
 <count-down wx:if="{{ propSign }}" class="countDown" prop-time="{{ time }}" bind:countDown="onCountDown"></count-down>
-<view class="container">
+<view class="all" wx:if="{{ propType === 'TEM8' }}">
+    <scroll-view class="upper" scroll-y>
+    <text class="function">题干区</text>
+    <count-down wx:if="{{ propSign }}" class="countDown" prop-time="{{ time }}" bind:countDown="onCountDown">
+    </count-down>
+    <view class="container">
+    <view wx:for="{{exercise.article}}" wx:key="item">{{item}}</view>
+    </view>
+    
+  </scroll-view>
+  <scroll-view class="under" scroll-y>
+    <text class="function">答题区</text>
+    <view class="container">
+      <view class="option" wx:for="{{ exercise.analysisList }}" wx:key="item">
+        <van-field input-class="field" value="{{ value }}" placeholder="请填写答案" bind:blur="sectionBFieldBlur"
+          label="{{item.order}}" />
+      </view>
+    </view>
+    <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="submit">{{
+      propSign ? '下一题' :
+      '提交'
+      }}</van-button>
+  </scroll-view>
+</view>
+<view class="container" wx:else>
     <view class="section">{{ exercise.title }}</view>
     <view class="direction">{{ exercise.directions }}</view>
-    <view class="question" wx:for="{{ exercise.questions }}" wx:for-item="question" wx:key="{{ question.order }}">
+    <view class="question" wx:for="{{ exercise.questions }}" wx:for-item="question" wx:key="question">
         <view class="order">{{ question.order }}.</view>
         <view class="item">{{ question.question }}</view>
         <van-radio-group value="{{ propSelectOptions[question.order-1] }}" data-order="{{ question.order }}"

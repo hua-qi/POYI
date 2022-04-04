@@ -27,16 +27,16 @@
         {
           "name": "题库列表",
           "pathName": "pages/topicList/topicList",
-          "query": "type=TEM4",
-          "scene": null,
-          "launchMode": "default"
+          "query": "type=TEM8",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "exercise",
           "pathName": "pages/exercise/exercise",
-          "query": "part=TEM_listening&type=TEM4",
-          "launchMode": "default",
-          "scene": null
+          "query": "part=TEM_languageUsage&type=TEM8",
+          "scene": null,
+          "launchMode": "default"
         },
         {
           "name": "答案解析",

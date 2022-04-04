@@ -50,10 +50,10 @@ Component({
           taskGapFillAnalysis: taskGapFill,
           conversationAnalysis: conversation
         } = this.TEMAnalysis();
-        // const RAS = getGrade({
-        //   taskGapFill,
-        //   conversation
-        // })
+        const RAS = getGrade({
+          taskGapFill,
+          conversation
+        })
         this.setData({
           RAS,
           ...this.TEMAnalysis

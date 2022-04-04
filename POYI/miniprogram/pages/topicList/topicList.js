@@ -59,7 +59,7 @@ Page({
                 partArray = ["TEM_listening", "TEM_cloze", "TEM_languageUsage", "TEM_reading", "TEM_writing"];
             } else if (type === "TEM8") {
                 partName = "listening";
-                partArray = ["TEM_listening", "TEM_reading", "TEM_languageUsage", "TEM_translation", "TEM_writing"];
+                partArray = ["TEM_listening", "TEM_reading", "TEM_languageUsaage", "TEM_translation", "TEM_writing"];
             }
 
             for (let item of partArray) {
@@ -96,7 +96,7 @@ Page({
             id,
             type
         } = event;
-        
+        console.log(event)
         await db.collection(part).where({
             type,
             id

@@ -2,7 +2,8 @@ let overallusageReplies = [];
 Component({
     properties: {
         propSign: String,
-        propPart: String
+        propPart: String,
+        propType: String,
     },
 
     data: {

@@ -1,3 +1,34 @@
+/* TEM8 相关样式 */
+Component {
+  height: 100%;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.all {
+  height: 100%;
+  width: 100%;
+}
+
+.upper {
+  height: 54%;
+}
+
+.under {
+  height: 46%;
+}
+
+.upper,
+.under {
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  width: 98%;
+  margin: 10rpx auto;
+  border-radius: 20rpx;
+}
+
+
+/* TEM4 相关样式 */
 .container {
     box-sizing: border-box;
     width: 94%;

@@ -17,7 +17,8 @@ Component({
   properties: {
     // 接收父组件传值
     propSign: String,
-    propPart: String
+    propPart: String,
+    propType: String
   },
   data: {
     type: "", // 习题类型 CET4/6 / TEM4/8
@@ -142,6 +143,19 @@ Component({
             section: "TEMSectionB"
           },
         ]
+      } else {
+        requestList = [
+        {
+          collectionName: "TEM_listeningSectionA",
+          id: children.sectionAId,
+          section: "TEMSectionA"
+        },
+        {
+          collectionName: "TEM_listeningSectionB",
+          id: children.sectionBId,
+          section: "TEMSectionB"
+        },
+      ]
       }
       requestList.forEach(item => {
         db.collection(item.collectionName).where({
