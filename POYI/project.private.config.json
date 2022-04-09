@@ -13,12 +13,6 @@
     "miniprogram": {
       "list": [
         {
-          "name": "首页",
-          "pathName": "pages/home/home",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "题库",
           "pathName": "pages/question/question",
           "query": "",
@@ -27,16 +21,16 @@
         {
           "name": "题库列表",
           "pathName": "pages/topicList/topicList",
-          "query": "type=TEM8",
-          "launchMode": "default",
-          "scene": null
+          "query": "type=CET4",
+          "scene": null,
+          "launchMode": "default"
         },
         {
           "name": "exercise",
           "pathName": "pages/exercise/exercise",
           "query": "part=TEM_languageUsage&type=TEM8",
-          "scene": null,
-          "launchMode": "default"
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "答案解析",
