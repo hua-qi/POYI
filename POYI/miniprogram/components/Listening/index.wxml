@@ -36,7 +36,7 @@
 </scroll-view>
 <scroll-view scroll-y class="stem" wx:else="">
   <view class="container">
-    <view class="section">dictation</view>
+    <view class="section">DICTATION</view>
     <view class="direction" wx:for="{{ TEMDictation.directions }}" wx:for-item="direction">{{ direction }}</view>
     <view class="header" wx:for="{{ TEMDictation.header }}" wx:for-item="header">{{ header }}</view>
     <textarea class="textarea" placeholder="此处书写内容" maxlength="-1" bindblur="getComposition"></textarea>

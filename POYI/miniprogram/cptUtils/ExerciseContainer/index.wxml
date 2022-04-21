@@ -7,11 +7,12 @@
   <view class="exercise" wx:for="{{ propExercises }}" wx:for-item="exercise" wx:key="{{ exercise.title }}">
     <view class="title">{{ exercise.title }}</view>
     <view class="question" wx:for="{{ exercise.questions }}" wx:for-item="question" wx:key="{{ question.order }}">
+    <view class="question_topic">  
       <view class="order">{{ question.order }}.</view>
-      <van-radio-group value="{{ replies[question.order-1] }}" data-order="{{ question.order }}"
-        bind:change="sectionRadioChange">
-        <van-radio label-class="option" wx:for="{{ question.options }}" wx:for-item="option" wx:key="{{ option }}"
-          name="{{ option }}" checked-color="#1d91f6">{{ option }}</van-radio>
+      <view>{{ question.question }}</view>
+    </view>
+      <van-radio-group value="{{ replies[question.order-1] }}" data-order="{{ question.order }}" bind:change="sectionRadioChange">
+        <van-radio label-class="option" wx:for="{{ question.options }}" wx:for-item="option" wx:key="{{ option }}" name="{{ option }}" checked-color="#1d91f6">{{ option }}</van-radio>
       </van-radio-group>
     </view>
   </view>

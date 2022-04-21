@@ -22,15 +22,15 @@
           "name": "题库列表",
           "pathName": "pages/topicList/topicList",
           "query": "type=CET4",
-          "scene": null,
-          "launchMode": "default"
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "exercise",
           "pathName": "pages/exercise/exercise",
-          "query": "part=TEM_languageUsage&type=TEM8",
-          "launchMode": "default",
-          "scene": null
+          "query": "part=CET_reading&type=CET4",
+          "scene": null,
+          "launchMode": "default"
         },
         {
           "name": "答案解析",
