@@ -1,0 +1,6 @@
+<view class="container" data-type="{{propType}}" bindtap="getQuestion">
+  <view class="bankImage">
+    <van-image image-class="cover" width="5rem" height="5rem" fit="cover" src="{{propImgUrl}}" />
+  </view>
+  <view class="title">{{propTitle}}</view>
+</view>

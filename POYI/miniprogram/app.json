@@ -7,7 +7,8 @@
     "pages/exercise/exercise",
     "pages/analysis/analysis",
     "pages/wrongs/wrongs",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/wordsList/wordsList"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -25,7 +26,7 @@
       {
         "selectedIconPath": "images/word-active.png",
         "iconPath": "images/word.png",
-        "pagePath": "pages/word/word",
+        "pagePath": "pages/wordsList/wordsList",
         "text": "单词"
       },
       {

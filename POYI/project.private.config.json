@@ -29,8 +29,8 @@
           "name": "exercise",
           "pathName": "pages/exercise/exercise",
           "query": "part=CET_reading&type=CET4",
-          "scene": null,
-          "launchMode": "default"
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "答案解析",
@@ -41,8 +41,9 @@
         {
           "name": "单词",
           "pathName": "pages/word/word",
-          "query": "",
-          "scene": null
+          "query": "type=CET4",
+          "scene": null,
+          "launchMode": "default"
         },
         {
           "name": "个人",

@@ -4,7 +4,7 @@
   <view class="words">
     <view
       class="mean {{ selected && item._id === rightId ? 'right' : '' }} {{ selected && item._id === selectId && selectId !== rightId ? 'wrong' : '' }}"
-      wx:for="{{ words }}" wx:key="{{ item._id }}" bindtap="verify" data-id="{{ item._id }}">{{ item.mean }}</view>
+      wx:for="{{ words }}" wx:key="_id" bindtap="verify" data-id="{{ item._id }}">{{ item.mean }}</view>
   </view>
   <view class="button" bindtap="verify"> 不认识 </view>
   <view class="button" wx:if="{{ selected }}" bindtap="next"> 下一题 </view>

@@ -6,7 +6,7 @@ Component({
             required: true
         },
         propDirections: {
-            type: Array | String,
+            type: Array || String,
         },
         propExercises: {
             type: Array,

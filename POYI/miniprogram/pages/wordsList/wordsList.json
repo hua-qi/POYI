@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "历年题库",
+  "navigationBarTitleText": "单词",
   "usingComponents": {
     "level-item": "../../components/LevelItem"
   }

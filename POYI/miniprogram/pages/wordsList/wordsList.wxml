@@ -1,0 +1,1 @@
+<level-item  wx:for="{{itemData}}" wx:key="type" prop-type="{{item.type}}" prop-title="{{item.title}}" prop-imgUrl="{{item.imgUrl}}" prop-wordOrTopic="word"/>

@@ -1,0 +1,19 @@
+.container {
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 90vw;
+  height: 20vh;
+  margin-top: 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 0 10px 2px #bdcee0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bankImage,
+.cover {
+  border-radius: 20rpx;
+
+}

@@ -3,6 +3,7 @@ const db = wx.cloud.database();
 const _ = db.command;
 Page({
     data: {
+        type: "",
         word: "",
         words: [],
         rightId: "",
@@ -19,21 +20,29 @@ Page({
         }
     },
 
-    onShow() {
+     onLoad(option) {
+         this.setData({
+            type: option.type
+        })
+
         // 调用下一题函数
-        this.next();
+         this.next();
     },
 
     // 下一题
     async next() {
+        let collectionName = `${this.data.type}_words`;
+        console.log(collectionName)
+
         let words = "";
         // 获取单词数据 （须进行同步设置，便于之后获取 word）
-        await db.collection("CET4_words").aggregate().sample({
+        await db.collection(collectionName).aggregate().sample({
             size: 4
         }).end().then(res => {
+            console.log(res);
             words = res.list
         });
-        
+
         // 随机选择正确选项
         let word = words[Math.floor(Math.random() * words.length)];
         this.setData({
@@ -94,7 +103,7 @@ Page({
         let selectId = this.data.selectId;
         let rightId = this.data.rightId;
         const openId = wx.getStorageSync('openId');
-        
+
         if (selectId !== rightId) {
             wx.cloud.callFunction({
                 name: "pushOpenId",

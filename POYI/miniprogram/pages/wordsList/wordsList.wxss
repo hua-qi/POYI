@@ -1,4 +1,4 @@
-page {
+/* pages/wordsList/wordsList.wxss */page {
     height: 100%;
     display: flex;
     flex-direction: column;
