@@ -46,7 +46,7 @@
           data-order="{{ option }}" />
       </view>
     </view>
-    <exercise-container prop-section="secitonC" prop-directions="{{ CETSectionC.directions }}"
+    <exercise-container prop-section="sectionC" prop-directions="{{ CETSectionC.directions }}"
       prop-exercises="{{ CETSectionC.exercises }}" bind:overHandOption="sectionCRadioChange" />
     <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="submit">{{
       propSign ? '下一题' :

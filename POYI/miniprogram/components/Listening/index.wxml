@@ -11,9 +11,9 @@
   </view>
 </view>
 <scroll-view scroll-y class="stem" wx:if="{{ propPart === 'CET_listening' }}">
-  <exercise-container prop-section="secitonA" prop-directions="{{ CETSectionA.directions }}" prop-exercises="{{ CETSectionA.exercises }}" bind:overHandOption="sectionARadioChange" />
-  <exercise-container prop-section="secitonB" prop-directions="{{ CETSectionB.directions }}" prop-exercises="{{ CETSectionB.exercises }}" bind:overHandOption="sectionBRadioChange" />
-  <exercise-container prop-section="secitonC" prop-directions="{{ CETSectionC.directions }}" prop-exercises="{{ CETSectionC.exercises }}" bind:overHandOption="sectionCRadioChange" />
+  <exercise-container prop-section="sectionA" prop-directions="{{ CETSectionA.directions }}" prop-exercises="{{ CETSectionA.exercises }}" bind:overHandOption="sectionARadioChange" />
+  <exercise-container prop-section="sectionB" prop-directions="{{ CETSectionB.directions }}" prop-exercises="{{ CETSectionB.exercises }}" bind:overHandOption="sectionBRadioChange" />
+  <exercise-container prop-section="sectionC" prop-directions="{{ CETSectionC.directions }}" prop-exercises="{{ CETSectionC.exercises }}" bind:overHandOption="sectionCRadioChange" />
   <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="submit">{{
     propSign ? '下一题' :
     '提交'

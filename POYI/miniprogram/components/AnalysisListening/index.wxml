@@ -1,8 +1,8 @@
 <view class="global" wx:if="{{ propPart === 'CET_listening' }}">
   <grade-panel prop-ras="{{ RAS }}" />
-  <analysis-container prop-title="secitonA" prop-section="{{ sectionAAnalysis }}" />
-  <analysis-container prop-title="secitonB" prop-section="{{ sectionBAnalysis }}" />
-  <analysis-container prop-title="secitonC" prop-section="{{ sectionCAnalysis }}" />
+  <analysis-container prop-title="sectionA" prop-section="{{ sectionAAnalysis }}" />
+  <analysis-container prop-title="sectionB" prop-section="{{ sectionBAnalysis }}" />
+  <analysis-container prop-title="sectionC" prop-section="{{ sectionCAnalysis }}" />
   <van-button block color="linear-gradient(to right,  #ffffff, #1d91f6, #ffffff)" bindtap="jump">{{ propSign ? '下一题解析' :
     '返回试卷列表'
     }}
