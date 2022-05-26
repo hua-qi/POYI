@@ -1,4 +1,4 @@
 <van-count-down class="countTime" use-slot time="{{ propTime }}" bind:change="onChange">
-  <text class="item">{{ timeData.minutes }}</text>
-  <text class="item">{{ timeData.seconds }}</text>
+  <text class="item">{{ minutes  }}</text>
+  <text class="item">{{ seconds }}</text>
 </van-count-down>

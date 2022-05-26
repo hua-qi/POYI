@@ -5,7 +5,9 @@ Component({
   },
 
   data: {
-    timeData: {}
+    minutes: 0,
+    seconds: 0,
+
   },
 
   methods: {
@@ -16,8 +18,10 @@ Component({
       if ( minutes === 0 && seconds === 0 && milliseconds === 0 ) {
         this.triggerEvent("countDown");
       }
+
       this.setData({
-        timeData: e.detail
+        minutes : minutes >= 10 ? minutes : `0${minutes}`,
+        seconds : seconds >= 10 ? seconds : `0${seconds}`,
       })
     
     }

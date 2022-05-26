@@ -45,6 +45,7 @@ Page({
 
         // 随机选择正确选项
         let word = words[Math.floor(Math.random() * words.length)];
+        console.log(word)
         this.setData({
             words,
             word,

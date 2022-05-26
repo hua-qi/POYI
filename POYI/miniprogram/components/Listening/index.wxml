@@ -34,7 +34,7 @@
   </view>
   <exercise-container prop-section="{{ TEMSectionB.title }}" prop-directions="{{ TEMSectionB.directions }}" prop-exercises="{{ TEMSectionB.exercises }}" bind:overHandOption="TEMsectionBRadioChange" />
 </scroll-view>
-<scroll-view scroll-y class="stem" wx:else="">
+<scroll-view scroll-y class="stem" wx:else>
   <view class="container">
     <view class="section">DICTATION</view>
     <view class="direction" wx:for="{{ TEMDictation.directions }}" wx:for-item="direction">{{ direction }}</view>

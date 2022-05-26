@@ -13,10 +13,10 @@ Page({
     },
 
     // 登录功能
-    async login() {
+    login() {
         // 是否拥有缓存数据
         // 登录
-        await wx.getUserProfile({
+        wx.getUserProfile({
             desc: '登录后才能继续使用哟~',
             success: (result) => {
                 // 获取用户信息
