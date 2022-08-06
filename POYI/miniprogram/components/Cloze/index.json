@@ -1,7 +1,8 @@
 {
-    "component": true,
-    "usingComponents": {
-        "count-down": "../../cptUtils/CountDown/index",
-        "van-button": "@vant/weapp/button/index"
-    }
+  "component": true,
+  "usingComponents": {
+    "count-down": "../../cptUtils/CountDown/index",
+    "van-button": "@vant/weapp/button/index"
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

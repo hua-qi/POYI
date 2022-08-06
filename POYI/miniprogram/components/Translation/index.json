@@ -3,5 +3,6 @@
   "usingComponents": {
     "count-down": "../../cptUtils/CountDown/index",
     "van-button": "@vant/weapp/button/index"
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

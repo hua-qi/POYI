@@ -6,5 +6,6 @@
     "van-button": "@vant/weapp/button/index",
     "analysis-container": "../../cptUtils/AnalysisContainer/index",
     "grade-panel": "../../cptUtils/GradePanel/index"
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

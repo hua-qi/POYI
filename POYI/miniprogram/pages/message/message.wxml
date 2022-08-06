@@ -1,21 +1,23 @@
 <!-- 时间戳格式转换 -->
 <wxs src="./timeTranslate.wxs" module="timeTranslate"></wxs>
 
-<view class="container">
-  <scroll-view class="board" scroll-y refresher-enabled refresher-triggered="{{ triggered }}"
-    bindrefresherrefresh="dropDown" bindrefresherrestore="stop">
-    <view class="{{ item._openid === openId ? 'right' : 'left' }}" wx:for="{{ messagesList }}" wx:key="{{ item._id }}">
-      <view class="messageContainer">
-        <view class="time">{{ timeTranslate.timestampToTime(item.timeStamp) }}</view>
-        <view class="nameMessage">
-          <view class="nickName">{{ item.nickName }}</view>
-          <view class="message">{{ item.message }}</view>
+<scroll-view class="board" scroll-y refresher-enabled refresher-triggered="{{ triggered }}" bindrefresherrefresh="dropDown"scroll-into-view="{{ viewId }}">
+  <view id="msg-{{index}}" class="item {{ item._openid === openId ? 'self' : '' }}" wx:for="{{ messagesList }}" wx:for-index="index" wx:key="_id">
+    <image class="avator" src="{{ item.avatarUrl }}"></image>
+    <view class="info">
+      <view class="user">
+        <view class="time">
+          {{ timeTranslate.timestampToTime(item.timeStamp) }}
         </view>
+        <view class="name">{{ item.nickName }}</view>
+      </view>
+      <view class="txt">
+        <text user-select>{{ item.message }}</text>
       </view>
     </view>
-  </scroll-view>
-  <view class="inputBox" bindsubmit="submit">
-    <input class="input" placeholder="请输入留言" bindinput="getMessage" value="{{ message }}" />
-    <view class="button" size="mini" bindtap="submit">发送</view>
   </view>
+</scroll-view>
+<view class="inputBox" bindsubmit="submit">
+  <input class="input" placeholder="请输入留言" bindinput="getMessage" value="{{ message }}" />
+  <view class="button" hover-class="hover" size="mini" bindtap="submit">发送</view>
 </view>

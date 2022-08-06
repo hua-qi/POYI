@@ -3,5 +3,6 @@
     "usingComponents": {
         "analysis-container": "../../cptUtils/AnalysisContainer",
         "van-button": "@vant/weapp/button/index"
-    }
+    },
+    "lazyCodeLoading": "requiredComponents"
 }

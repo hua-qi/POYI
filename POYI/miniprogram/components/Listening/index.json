@@ -9,5 +9,6 @@
     "van-button": "@vant/weapp/button/index",
     "van-field": "@vant/weapp/field/index",
     "exercise-container": "../../cptUtils/ExerciseContainer/index"
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

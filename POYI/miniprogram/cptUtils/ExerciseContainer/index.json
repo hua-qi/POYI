@@ -1,7 +1,8 @@
 {
-    "component": true,
-    "usingComponents": {
-        "van-radio": "@vant/weapp/radio/index",
-        "van-radio-group": "@vant/weapp/radio-group/index"
-    }
+  "component": true,
+  "usingComponents": {
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index"
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

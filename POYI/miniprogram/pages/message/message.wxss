@@ -1,92 +1,123 @@
 page {
-  width: 100%;
-  height: 100%;
+  /* 初始化 display 表现 */
+  display: initial;
   background-image: url(https://636c-cloud1-4gvnm4k7b5bb273b-1307703970.tcb.qcloud.la/%E7%A0%B4%E8%AF%91%E8%8B%B1%E8%AF%AD%E5%9B%BE%E7%89%87/breakEnglishMessage.jpg?sign=d954183873ccad413dd1df05dd825565&t=1636790012);
-  background-size: 100% 100%; 
+  background-size: 100% 100%;
 }
 
-.container {
-  box-sizing: border-box;
-  padding: 2%;
-  width: 98%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
 .board {
-  box-sizing: border-box;
-  border-radius: 20rpx;
-  padding: 2% 4%;
-  width: 98%;
-  height: 90%;
-  background-color: rgba(10%,10%,10%,0.1);
+  height: 90vh;
+  background-color: rgba(10%, 10%, 10%, 0.1);
 }
-.left, .right {
-  width: 100%;
+
+/* 更新 */
+.item {
   display: flex;
+  padding: 7px;
+  margin-bottom: 8px;
+  /* 重点 基于流的逻辑定位  */
+  margin-inline-end: 44px;
 }
-.right, 
-.right .nameMessage {
-  flex-direction: row-reverse;
+
+.avator {
+  position: relative;
+  top: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 111, .6);
 }
-.messageContainer {
-  margin-bottom: 30rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+
+.info {
+  flex: 1;
+  text-align: start;
+  padding: 0 10px;
+  overflow: hidden;
 }
-.right .messageContainer {
-  align-items: flex-end;
+
+.user {
+  font-size: 13px;
+  color: #9493ad;
 }
+
 .time {
-  font-size: small;
-  color: #bdbdbd;
-  margin-bottom: 6rpx;
+  text-align: center;
+  direction: ltr;
 }
-.nameMessage {
-  display: flex;
+
+.name {
+  direction: ltr;
+  width: fit-content;
 }
-.nickName {
-  padding: 20rpx;
-  background-color: #1d91f6ff;
-  color: #ffffff;
-  font-weight: 600;
-  border-radius: 20rpx;
+
+.txt {
+  /* 方便之后伪元素定位 */
+  position: relative;
+  /* 元素宽度由内容决定 */
+  width: fit-content;
+  background-color: #fff;
+  /* 方便之后伪元素设置 */
+  border-color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+  /* 跟随文字大小 */
+  padding: 0.6em 1em;
+  margin: 5px 0 0;
+  border-radius: 6px;
 }
-.message {
-  margin: 0 20rpx;
-  padding: 20rpx;
-  background-color: #ffffff;
-  font-weight: 500;
-  border-radius: 20rpx;
+
+.txt>text {
+  /* 使文字内容方向不受整体文字流影响 */
+  unicode-bidi: plaintext;
 }
+
+.user+.txt::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  border: 0.5rem solid transparent;
+  /* 跟随 .txt 元素 */
+  border-top-color: inherit;
+  /* 逻辑定位 */
+  margin-inline-start: calc(-0.45rem - 1em);
+}
+
+/* 自身语句 改变流方向 */
+.self {
+  direction: rtl;
+}
+
 .inputBox {
-  box-sizing: border-box;
-  width: 98%;
-  height: 8%;
+  height: 10vh;
+  padding: 0 10px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 .input {
-  height: 90%;
-  width: 76%;
+  display: block;
+  width: 70%;
+  height: 60%;
+  padding-left: 10px;
+  border-radius: .6em;
   background-color: #fff;
-  border-radius: 20rpx;
-  padding-left: 10rpx;
 }
+
 .button {
-  height: 90%;
-  width: 20%;
-  border-radius: 20rpx;
-  background-color: #fff;
-  color: #1d91f6;
-  font-size: large;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 5em;
+  height: 2.4em;
+  line-height: 2em;
+  font-weight: 700;
+  text-align: center;
+  background-color: #3a82c9;
+  color: #fff;
+  border-radius: .4em;
+}
+
+/* 按钮点击 */
+.hover {
+  line-height: 2.3em;
+  background-color: #203895;
 }

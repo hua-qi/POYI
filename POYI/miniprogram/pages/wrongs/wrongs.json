@@ -3,5 +3,6 @@
   "usingComponents": {
     "van-icon": "@vant/weapp/icon/index",
     "van-notice-bar": "@vant/weapp/notice-bar/index"
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

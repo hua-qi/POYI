@@ -2,5 +2,6 @@
   "navigationBarTitleText": "单词",
   "usingComponents": {
     "level-item": "../../components/LevelItem"
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

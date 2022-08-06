@@ -2,5 +2,6 @@
   "navigationBarTitleText": "历年题库",
   "usingComponents": {
     "level-item": "../../components/LevelItem"
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

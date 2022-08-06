@@ -4,5 +4,6 @@
     "van-button": "@vant/weapp/button/index",
     "van-image": "@vant/weapp/image/index",
     "van-notice-bar": "@vant/weapp/notice-bar/index"
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

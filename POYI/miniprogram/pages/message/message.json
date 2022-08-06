@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "留言板",
   "usingComponents": {
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

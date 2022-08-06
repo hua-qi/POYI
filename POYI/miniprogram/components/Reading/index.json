@@ -7,5 +7,6 @@
     "count-down": "../../cptUtils/CountDown/index",
     "van-button": "@vant/weapp/button/index",
     "exercise-container": "../../cptUtils/ExerciseContainer/index"
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }
