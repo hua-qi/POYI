@@ -7,6 +7,5 @@
     "analysis-cloze": "../../components/AnalysisCloze",
     "analysis-translation": "../../components/AnalysisTranslation",
     "sidebar": "../../cptUtils/sidebar"
-  },
-  "lazyCodeLoading": "requiredComponents"
+  }
 }

@@ -7,6 +7,5 @@
     "cloze": "../../components/Cloze",
     "language-usage": "../../components/languageUsage",
     "sidebar": "../../cptUtils/sidebar"
-  },
-  "lazyCodeLoading": "requiredComponents"
+  }
 }

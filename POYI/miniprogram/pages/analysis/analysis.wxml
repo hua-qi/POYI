@@ -1,12 +1,7 @@
 <sidebar prop-type="{{ type }}" />
-<analysis-writing class="compontent" wx:if="{{ part === 'CET_writing' || part === 'TEM_writing'}}"
-  prop-sign="{{ sign }}" prop-part="{{ part }}" prop-type="{{ type }}" />
-<analysis-listening class="compontent" wx:elif="{{ part === 'CET_listening' || part === 'TEM_listening' }}"
-  prop-sign="{{ sign }}" prop-part="{{ part }}" prop-type="{{ type }}" />
-<analysis-reading class="compontent" wx:elif="{{ part === 'CET_reading' || part === 'TEM_reading' }}"
-  prop-sign="{{ sign }}" prop-part="{{ part }}" prop-type="{{ type }}" />
-<analysis-language-usage class="compontent" wx:elif="{{ part === 'TEM_languageUsage' }}" prop-sign="{{ sign }}"
-  prop-part="{{ part }}" prop-type="{{ type }}" />
-<analysis-cloze class="compontent" wx:elif="{{ part === 'TEM_cloze' }}" prop-sign="{{ sign }}" prop-part="{{ part }}"  prop-type="{{ type }}"/>
-<analysis-translation class="compontent" wx:elif="{{ part === 'CET_translation' || 'TEM_translation' }}"
-  prop-sign="{{ sign }}" prop-part="{{ part }}" prop-type="{{ type }}" />
+<analysis-writing class="compontent" wx:if="{{ part === 'CET_writing' || part === 'TEM_writing'}}" prop-sign="{{ sign }}" prop-part="{{ part }}" prop-type="{{ type }}" />
+<analysis-listening class="compontent" wx:elif="{{ part === 'CET_listening' || part === 'TEM_listening' }}" prop-sign="{{ sign }}" prop-part="{{ part }}" prop-type="{{ type }}" />
+<analysis-reading class="compontent" wx:elif="{{ part === 'CET_reading' || part === 'TEM_reading' }}" prop-sign="{{ sign }}" prop-part="{{ part }}" prop-type="{{ type }}" />
+<analysis-language-usage class="compontent" wx:elif="{{ part === 'TEM_languageUsage' }}" prop-sign="{{ sign }}" prop-part="{{ part }}" prop-type="{{ type }}" />
+<analysis-cloze class="compontent" wx:elif="{{ part === 'TEM_cloze' }}" prop-sign="{{ sign }}" prop-part="{{ part }}" prop-type="{{ type }}" />
+<analysis-translation class="compontent" wx:elif="{{ part === 'CET_translation' || 'TEM_translation' }}" prop-sign="{{ sign }}" prop-part="{{ part }}" prop-type="{{ type }}" />

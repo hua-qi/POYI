@@ -3,6 +3,5 @@
   "usingComponents": {
     "van-circle": "@vant/weapp/circle/index",
     "van-button": "@vant/weapp/button/index"
-  },
-  "lazyCodeLoading": "requiredComponents"
+  }
 }

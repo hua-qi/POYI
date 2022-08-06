@@ -2,6 +2,5 @@
   "usingComponents": {
     "van-popup": "@vant/weapp/popup/index",
     "van-icon": "@vant/weapp/icon/index"
-  },
-  "lazyCodeLoading": "requiredComponents"
+  }
 }
