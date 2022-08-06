@@ -19,7 +19,6 @@ Page({
     // 加载即显示最后一条信息
     this.setData({
       openId: openId,
-      viewId: "msg-5"
     })
   },
 
